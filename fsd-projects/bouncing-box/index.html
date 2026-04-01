@@ -70,39 +70,38 @@
 
         // TODO 2 - Variable declarations
 
+    // TODO 2: variables
+    var positionX = 0;
+    var points = 0;
+    var speed = 10;
 
+    // TODO 1 + 2 + 6 + 7: update function
+    function update() {
+      // move box
+      positionX += speed;
 
+      // right boundary
+      if (positionX > boardWidth) {
+        speed *= -1;
+      }
+      // left boundary
+      else if (positionX < 0) {
+        speed *= -1;
+      }
 
+      // move box on screen
+      moveBoxTo(positionX);
+    }
 
-        /**
-         * This Function will be called 20 times/second.
-         * Each time it is called, it should move the Box to a new location.
-         * If the box drifts off the screen, turn it around!
-         */
-        function update() {
+    // TODO 3 + 4 + 5: click function
+    function handleBoxClick() {
+      positionX = 0;      // reset position
+      points++;           // increase score
+      speed = 3 * points + 10; // speed formula
+      changeBoxText(points);   // display score
+    }
 
-        
-
-          
-        }
-
-        /**
-         * This Function will be called each time the box is clicked.
-         * Each time it is called, it should perform each of the following actions:
-         * - increase the points total
-         * - increase the speed
-         * - move the box to the left side of the screen.
-         */
-        function handleBoxClick() {
-
-
-
-
-        }
-
-
-        
-      })();
-    </script>
+  })();
+</script>
   </body>
 </html>
