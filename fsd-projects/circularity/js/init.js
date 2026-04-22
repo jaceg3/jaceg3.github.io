@@ -113,10 +113,10 @@ if (circle.y < 0) {
        
         app.addUpdateable(window.opspark.game);
     }
-};
+;
 
 // DO NOT REMOVE THIS CODE //////////////////////////////////////////////////////
 if((typeof process !== 'undefined') &&
     (typeof process.versions.node !== 'undefined')) {
     // here, export any references you need for tests //
-    module.exports = init;
+    module.exports = init; }
